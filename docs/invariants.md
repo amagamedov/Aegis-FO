@@ -1,9 +1,3 @@
-**INVARIANTS.md**
-
-Rules that break the product if violated. Not best practices — actual failure modes.
-
----
-
 **1. Tenant isolation is enforced at DB level via RLS.**
 If tenant A sees tenant B's data, even once, the product is dead. No query-level filtering — RLS policies on every tenant-scoped table, context set in middleware.
 
